@@ -1,7 +1,7 @@
 /* Existing CSS */
 body {
     margin: 0;
-    padding: 0;
+    padding-top: 60px;
     font-family: "Space Mono", monospace;
     background-color: #ffffff;
     color: #1e1e1e;
@@ -10,6 +10,40 @@ body {
     align-items: center;
     justify-content: center;
 }
+
+/* Navigation bar styles */
+nav {
+    width: 100%;
+    background-color: #ffffff; /* Changed background color to white */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 30px; /* Increased gap between navigation items */
+}
+
+nav ul li a {
+    color: #1e1e1e; /* Changed text color to dark for better contrast */
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #1e90ff;
+}
+/* End of Navigation bar styles */
 
 header {
     text-align: center;
@@ -28,9 +62,9 @@ p {
     line-height: 1.6;
 }
 
-.gallery-section {
+.standard-section {
     text-align: center;
-    margin: 20px 0;
+    margin: 10px 0;
 }
 
 .gallery {
@@ -86,9 +120,48 @@ a {
     margin: 40px 0;
 }
 
+/* footer */
+footer {
+    margin-top: 50px;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin: 10px 0;
+    color: #1e1e1e;
+}
+
+footer a {
+    color: #1e90ff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive design */
 @media (max-width: 767px) {
     body {
         padding: 20px;
+    }
+
+    nav {
+        padding: 10px 0;
+    }
+
+    nav ul {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    nav ul li a {
+        font-size: 1em;
     }
 
     header {
