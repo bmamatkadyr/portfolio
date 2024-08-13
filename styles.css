@@ -63,6 +63,7 @@ p {
 }
 
 .standard-section {
+    max-width: 800px;
     text-align: center;
     margin: 10px 0;
 }
@@ -73,7 +74,6 @@ p {
     justify-content: center;
     gap: 10px;
     margin: 20px 0;
-    max-width: 800px;
 }
 
 .gallery img {
@@ -81,6 +81,30 @@ p {
     height: 300px;
     object-fit: cover;
     border-radius: 8px;
+}
+
+/* Add this CSS in the styles.css file */
+.youtube-videos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.youtube-videos iframe {
+    width: 360px;
+    height: 202px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 767px) {
+    .youtube-videos iframe {
+        width: 100px;
+        height: 56px;
+    }
 }
 
 footer {
